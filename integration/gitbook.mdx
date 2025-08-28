@@ -1,0 +1,76 @@
+---
+title: "GitBook Integration"
+description: "Integrate Ask Cookbook with GitBook documentation"
+---
+
+# Setting up CloudFlare as a Proxy (Orange Cloud)
+
+First, ensure your domain is on CloudFlare and the "Proxy Status" is set to "Proxied" in your DNS Records.
+
+![CloudFlare DNS settings](https://gist.github.com/assets/20116062/fa5286d1-1649-4cc6-83f5-b2f542aeae3f)
+
+The cloud icon should be **orange**.
+
+<Info>
+If you need help adding a custom domain to GitBook, refer to the [GitBook DNS configuration guide](https://docs.gitbook.com/published-documentation/custom-domain/configure-dns#configure-a-cname-record). Note that GitBook recommends not using CloudFlare as a proxy, but it's required for our integration.
+</Info>
+
+---
+
+# Configuration of CloudFlare
+
+After setting up CloudFlare as a proxy, you'll need to adjust settings. Choose between automatic or manual setup.
+
+## Automatic Setup (Recommended)
+
+This is the fastest and safest method using our auto-configuration tool.
+
+### Get API Key
+
+1. Visit [CloudFlare API Tokens](https://dash.cloudflare.com/profile/api-tokens)
+2. Click "Create Token"
+3. Click "Get started"
+4. Configure with these parameters:
+
+```md
+Token Name: Anything
+Permissions:
+- Zone:Config Rules:Edit
+- Zone:Zaraz:Edit and Publish
+Zone Resources:
+- Include:Specific zone:[your domain]
+Client IP Address Filtering:
+None
+TTL:
+Today -> Tomorrow
+```
+
+5. Click "Create Token"
+6. Copy your token
+
+### Get Zone ID
+
+1. Visit [CloudFlare Zones](https://dash.cloudflare.com/zones)
+2. Click on your domain
+3. Copy the Zone ID
+
+### Configure with our tool
+
+1. Visit [https://cms.cookbook.dev/cloudflare](https://cms.cookbook.dev/cloudflare)
+2. Enter your API Key and Zone ID
+3. Enter your desired subdomain/domain
+4. Click "Configure Cloudflare"
+
+---
+
+## Manual Setup (Temporary not available!)
+
+<Warning>
+As of August 28, due to CloudFlare API changes, manual setup is temporarily unavailable. Please use the automatic setup method above.
+</Warning>
+
+---
+
+# Any troubles?
+
+Contact us at [tyler@cookbook.dev](mailto:tyler@cookbook.dev) for help.

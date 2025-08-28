@@ -1,44 +1,38 @@
-# Mintlify Starter Kit
+# Ask Cookbook Integration Documentation
 
-Use the starter kit to get your docs deployed and ready to customize.
+Documentation for integrating Ask Cookbook AI chatbot into websites and documentation platforms.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## About Ask Cookbook
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+Ask Cookbook is an AI-powered documentation chatbot that helps users find answers quickly within your documentation. It can be integrated into any website using multiple methods including basic HTML, React components, Webflow, and GitBook.
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+## Documentation Structure
+
+- **Quickstart**: Get started with Ask Cookbook in minutes
+- **Integration Methods**:
+  - Basic integration for any website
+  - React integration for React applications
+  - Webflow integration through dashboard
+  - GitBook integration with CloudFlare setup
+
+## Getting an API Key
+
+Contact [tyler@cookbook.dev](mailto:tyler@cookbook.dev) to get your API key for Ask Cookbook integration.
 
 ## Development
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
+This documentation is built with Mintlify. To preview changes locally:
 
-```
+```bash
+# Install Mintlify CLI
 npm i -g mint
-```
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
-
-```
+# Run development server
 mint dev
 ```
 
 View your local preview at `http://localhost:3000`.
 
-## Publishing changes
+## Support
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
-
-## Need help?
-
-### Troubleshooting
-
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
-
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
-- [Mintlify community](https://mintlify.com/community)
+For integration support or custom requirements, contact us at [tyler@cookbook.dev](mailto:tyler@cookbook.dev).

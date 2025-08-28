@@ -1,0 +1,65 @@
+---
+title: "Webflow Integration"
+description: "Add Ask Cookbook to Webflow sites"
+---
+
+Integrate Ask Cookbook into your Webflow website through the dashboard.
+
+## Setup steps
+
+<Steps>
+<Step title="Access site settings">
+1. Open your [Webflow dashboard](https://webflow.com/dashboard)
+2. Navigate to "Site settings"
+</Step>
+
+<Step title="Open custom code section">
+1. Click on the "Custom code" tab in the site settings
+</Step>
+
+<Step title="Add script to head">
+Add the following code to the "Head code" section:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/@cookbookdev/docsbot/dist/standalone/index.cjs.js" defer></script>
+```
+</Step>
+
+<Step title="Add div to footer">
+Add the following code to the "Footer code" section:
+
+```html
+<div id="__cookbook" data-api-key="YOUR_API_KEY_HERE"></div>
+```
+</Step>
+
+<Step title="Publish your site">
+Save the changes and publish your Webflow site.
+</Step>
+</Steps>
+
+## Screenshots
+
+<Frame>
+<img src="https://gist.github.com/assets/20116062/30f8e016-a256-471e-8c24-d3201205d657" alt="Webflow dashboard site settings" />
+</Frame>
+
+<Frame>
+<img src="https://gist.github.com/assets/20116062/0e2489f5-e3a1-4ea9-b1f2-3a87e0aaffd8" alt="Webflow custom code tab" />
+</Frame>
+
+<Frame>
+<img src="https://gist.github.com/assets/20116062/30dfdf56-ab26-4e58-846a-7223a38ee350" alt="Save custom code changes" />
+</Frame>
+
+<Frame>
+<img src="https://gist.github.com/assets/20116062/11a398e2-2644-49c3-9df3-18b493c4cc59" alt="Publish Webflow site" />
+</Frame>
+
+<Warning>
+Remember to replace `YOUR_API_KEY_HERE` with your actual API key. Contact [tyler@cookbook.dev](mailto:tyler@cookbook.dev) to get your key.
+</Warning>
+
+<Info>
+Having trouble with the integration? Contact us at [tyler@cookbook.dev](mailto:tyler@cookbook.dev) for help.
+</Info>

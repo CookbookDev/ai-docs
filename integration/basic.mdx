@@ -1,0 +1,58 @@
+---
+title: "Basic Integration"
+description: "Add Ask Cookbook to any website with HTML"
+---
+
+The basic integration method works with any static website where you can directly edit the HTML.
+
+## Implementation
+
+Add the following code to your website:
+
+<CodeGroup>
+```html
+<!-- Add this to your <head> -->
+<script src="https://cdn.jsdelivr.net/npm/@cookbookdev/docsbot/dist/standalone/index.cjs.js" defer></script>
+```
+
+```html
+<!-- Add this to your <body> -->
+<div id="__cookbook" data-api-key="YOUR_API_KEY_HERE"></div>
+```
+</CodeGroup>
+
+## Configuration options
+
+The `<div>` element accepts the following optional attributes:
+
+<ParamField path="data-api-key" type="string" required>
+Your API key for Ask Cookbook. Contact [tyler@cookbook.dev](mailto:tyler@cookbook.dev) to get your key.
+</ParamField>
+
+<ParamField path="data-always-open" type="boolean">
+If set, the modal will be always open (useful for showcase purposes).
+</ParamField>
+
+<ParamField path="data-no-fast" type="boolean">
+Disables fast mode switch, forcing the chatbot into detailed mode.
+</ParamField>
+
+## Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Documentation</title>
+    <script src="https://cdn.jsdelivr.net/npm/@cookbookdev/docsbot/dist/standalone/index.cjs.js" defer></script>
+</head>
+<body>
+    <h1>Welcome to My Documentation</h1>
+    <div id="__cookbook" data-api-key="your-api-key-here"></div>
+</body>
+</html>
+```
+
+<Info>
+Having trouble with the integration? Contact us at [tyler@cookbook.dev](mailto:tyler@cookbook.dev) for help.
+</Info>

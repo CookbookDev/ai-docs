@@ -1,0 +1,85 @@
+---
+title: "React Integration"
+description: "Integrate Ask Cookbook with React applications"
+---
+
+Use our React component to integrate Ask Cookbook into your React applications.
+
+## Installation
+
+Install the package using your preferred package manager:
+
+<Tabs>
+<Tab title="npm">
+```bash
+npm install @cookbookdev/docsbot
+```
+</Tab>
+
+<Tab title="yarn">
+```bash
+yarn add @cookbookdev/docsbot
+```
+</Tab>
+
+<Tab title="pnpm">
+```bash
+pnpm install @cookbookdev/docsbot
+```
+</Tab>
+</Tabs>
+
+## Usage
+
+Import and add the component to a parent component, such as your app's root or layout:
+
+```jsx
+import AskCookbook from "@cookbookdev/docsbot";
+
+export default function App() {
+  return (
+    <>
+      <AskCookbook apiKey="YOUR_API_KEY_HERE" />
+      {/* Your other components */}
+    </>
+  );
+}
+```
+
+## Props
+
+<ParamField path="apiKey" type="string" required>
+Your API key for Ask Cookbook. Contact [tyler@cookbook.dev](mailto:tyler@cookbook.dev) to get your key.
+</ParamField>
+
+<ParamField path="alwaysOpen" type="boolean">
+If `true`, the modal will be always open (useful for showcase purposes).
+</ParamField>
+
+<ParamField path="noFastMode" type="boolean">
+If `true`, disables fast mode switch, forcing the chatbot into detailed mode.
+</ParamField>
+
+## Next.js example
+
+For Next.js applications, add the component to your root layout:
+
+```jsx
+// app/layout.js or pages/_app.js
+import AskCookbook from "@cookbookdev/docsbot";
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>
+        <AskCookbook apiKey="your-api-key-here" />
+        {children}
+      </body>
+    </html>
+  );
+}
+```
+
+<Info>
+Having trouble with the integration? Contact us at [tyler@cookbook.dev](mailto:tyler@cookbook.dev) for help.
+</Info>
